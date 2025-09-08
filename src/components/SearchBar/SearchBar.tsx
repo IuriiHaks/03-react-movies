@@ -12,6 +12,7 @@ export default function SearchBar({ onSubmit }: SearchBarProps) {
       toast.error("Please enter your search query.");
       return;
     }
+    // console.log("formData:", formData);
     onSubmit(searchQuery);
   };
 
@@ -26,7 +27,7 @@ export default function SearchBar({ onSubmit }: SearchBarProps) {
         >
           Powered by TMDB
         </a>
-        <form className={css.form} action={handleAction}>
+        <form action={handleAction} className={css.form}>
           <input
             className={css.input}
             type="text"
